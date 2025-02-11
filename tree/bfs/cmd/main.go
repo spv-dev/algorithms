@@ -21,7 +21,9 @@ func main() {
 		"Aram":   {},
 	}
 
-	fmt.Println(bfs.HasPath(friends, "I", "Aram"))
+	fmt.Println(bfs.GetPath(friends, "I", "Aram"))
+	fmt.Println(bfs.GetPath(friends, "I", "Tomas"))
+	fmt.Println(bfs.GetPath(friends, "I", "Tom1s"))
 
 	city_map := map[string][]string{
 		"Home":     {"Park", "School", "Mail"},
@@ -36,6 +38,6 @@ func main() {
 		"Theater":  {"Shop", "Cafe"},
 		"Office":   {"Cafe", "Hospital"},
 	}
-	fmt.Println(bfs.HasPath(city_map, "Home", "Theater"))
+	fmt.Println(bfs.GetPath(city_map, "Home", "Theater"))
 
 }
