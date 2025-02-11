@@ -1,4 +1,4 @@
-package queuev2
+package queue
 
 type Queue struct {
 	items []any
