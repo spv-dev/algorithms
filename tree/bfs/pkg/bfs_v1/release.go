@@ -1,13 +1,12 @@
 package bfs
 
 import (
-	stringqueue "github.com/spv-dev/algorithms/tree/queue/pkg/queue_v1"
-	simplequeue "github.com/spv-dev/algorithms/tree/queue/pkg/queue_v2"
+	q "github.com/spv-dev/algorithms/tree/queue/pkg/queue_v1"
 )
 
 func HasPath(graph map[string][]string, from string, to string) bool {
 	visited := make(map[string]struct{})
-	queue := stringqueue.NewStringQueue()
+	queue := q.NewStringQueue()
 	queue.Enqueue(from)
 
 	for !queue.IsEmpty() {
@@ -54,7 +53,7 @@ func (qi *QueueItem) Path() []string {
 
 func GetPath(graph map[string][]string, from string, to string) []string {
 	visited := make(map[string]struct{})
-	queue := simplequeue.NewQueue()
+	queue := q.NewQueue()
 	queue.Enqueue(NewQueueItem(from, []string{}))
 
 	for !queue.IsEmpty() {
